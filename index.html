@@ -1,92 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>calculator
+    </title>
     <link rel="stylesheet" href="style.css">
-
-    
 </head>
+
 <body>
-    <div class="cont">
-      <div class="con2">
-        
-        <div class="main">
+    <div class="calculator">
+        <div class="inputs" id="input"></div>
+        <div class="buttons">
+            <div class="operators">
+                <div>+</div>
+                <div>-</div>
+                <div>&times;</div>
+                <div>&divide;</div>
+            </div>
+            <div class="leftPanel">
+                <div class="numbers">
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
 
-          <input id="inpt" type="text">
-        
-          <div class="row">
-              <div class="btn">C</div>
-              <div class="btn">%</div>
-              <div class="btn">x</div>
-              <div class="btn">/</div>
+
+                </div>
+                <div class="numbers">
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+                <div class="numbers">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+                <div class="numbers">
+                    <div>0</div>
+                    <div>.</div>
+                    <div id="clear">C</div>
+                </div>
             </div>
-          <div class="row">
-            <div class="btn">7</div>
-            <div class="btn">8</div>
-            <div class="btn">9</div>
-            <div class="btn">*</div>
-          </div>
-          <div class="row">
-              <div class="btn">4</div>
-              <div class="btn">5</div>
-              <div class="btn">6</div>
-              <div class="btn">-</div>
-            </div>
-            <div class="row">
-              <div class="btn">1</div>
-              <div class="btn">2</div>
-              <div class="btn">3</div>
-              <div class="btn">+</div>
-            </div>
-            <div class="row">
-              <div class="btn">00</div>
-              <div class="btn">0</div>
-              <div class="btn">.</div>
-              <div class="btn">=</div>
-            </div>
+            <div class="equal" id="result">=</div>
         </div>
-      </div>
-        
     </div>
-    
-
-    <script>
-    let strng="";
-    let btn=document.querySelectorAll('.btn');
-
-    btn.forEach((item)=>{
-      inpt=document.querySelector('#inpt')
-      item.addEventListener('click',(e)=>{
-        if(e.target.innerHTML==="="){
-          strng=eval(strng);
-          // console.log(strng);
-          inpt.value=strng;
-
-        }
-        else if(e.target.innerHTML==="C"){
-          strng="";
-          inpt.value="";
-        }
-        else if(e.target.innerHTML==="x"){
-          inpt.value=strng.substr(0, strng.length - 1);
-          
-         
-        }
-        else{
-
-        strng+=e.target.innerHTML;
-        inpt.value=strng;
-        // console.log(strng);
-
-      }
-      })
-    });
-
-
-
-    </script>
+    <!-- JAVA SCRIPT -->
+    <script src="Script.js"></script>
 </body>
+
 </html>
